@@ -12,15 +12,23 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
+    "@svgr/webpack": "^6.5.1",
     "@types/node": "^18.11.18",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@types/react-router-dom": "^5.3.3",
     "@types/webpack": "^5.28.0",
     "@types/webpack-dev-server": "^4.7.2",
+    "babel-loader": "^9.1.2",
+    "babel-plugin-i18next-extract": "^0.9.0",
     "css-loader": "^6.7.3",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.7.2",
+    "react-refresh": "^0.14.0",
     "sass": "^1.57.1",
     "sass-loader": "^13.2.0",
     "style-loader": "^3.3.1",
@@ -32,8 +40,12 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "i18next": "^22.4.9",
+    "i18next-browser-languagedetector": "^7.0.1",
+    "i18next-http-backend": "^2.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-i18next": "^12.1.5",
     "react-router-dom": "^6.8.0"
   }
 }
