@@ -36,6 +36,7 @@ module.exports = {
             markupOnly: true,
             ignoreAttribute: ['data-testid', 'to'],
         }],
+        'linebreak-style': 'off',
     },
     globals: {
         __IS_DEV__: true,
