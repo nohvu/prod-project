@@ -9,8 +9,11 @@
   "Вызвать ошибку": "Throw error",
   "Короткий язык": "En",
   "Войти": "Login",
+  "Выйти": "Logout",
   "Увеличить": "Increment",
   "Уменьшить": "Decrement",
   "Введите логин": "Enter login",
-  "Введите пароль": "Enter password"
+  "Введите пароль": "Enter password",
+  "Авторизация": "Authorization",
+  "Неверный логин/пароль": "You entered an incorrect username or password"
 }
