@@ -17,7 +17,8 @@ import { loginActions, loginReducer } from '../../model/slice/loginSlice';
 import cls from './LoginForm.module.scss';
 
 export interface LoginFormProps {
-    className?: string
+    className?: string,
+    onSuccess: () => void
 }
 const initialReducers: ReducerList = {
     loginForm: loginReducer,
@@ -26,6 +27,7 @@ const initialReducers: ReducerList = {
 const LoginForm = memo((props: LoginFormProps) => {
     const {
         className,
+        onSuccess,
     } = props;
     const { t } = useTranslation();
     const dispatch = useAppDispatch();
@@ -40,9 +42,12 @@ const LoginForm = memo((props: LoginFormProps) => {
     const onChangePassword = useCallback((value: string) => {
         dispatch(loginActions.setPassword(value));
     }, [dispatch]);
-    const onLoginClick = useCallback(() => {
-        dispatch(loginByUsername({ username, password }));
-    }, [dispatch, username, password]);
+    const onLoginClick = useCallback(async () => {
+        const result = await dispatch(loginByUsername({ username, password }));
+        if (result.meta.requestStatus === 'fulfilled') {
+            onSuccess();
+        }
+    }, [dispatch, username, password, onSuccess]);
 
     return (
         <DynamicModuleLoader reducers={initialReducers} removeAfterUnmount>

@@ -1,5 +1,5 @@
 import React, {
-    InputHTMLAttributes, memo, useCallback, useEffect, useRef, useState,
+    InputHTMLAttributes, memo, useEffect, useRef, useState,
 } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 

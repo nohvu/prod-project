@@ -44,6 +44,13 @@
     }
   ],
   "profile": {
-    "name": "typicode"
+    "firstname": "John",
+    "lastname": "Cooper",
+    "age": 30,
+    "currency": "USD",
+    "country": "UK",
+    "city": "London",
+    "username": "jcw",
+    "avatar": ""
   }
 }
