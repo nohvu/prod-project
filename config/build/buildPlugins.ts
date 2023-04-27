@@ -22,6 +22,7 @@ export function buildPlugins({ paths, isDev }: BuildOptions): WebpackPluginInsta
             __IS_DEV__: JSON.stringify(isDev),
         }),
     ];
+
     if (isDev) {
         plugins.push(new ReactRefreshWebpackPlugin(), new HotModuleReplacementPlugin());
         plugins.push(new BundleAnalyzerPlugin({
