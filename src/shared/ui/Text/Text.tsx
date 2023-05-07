@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 
 import cls from './Text.module.scss';
@@ -8,11 +8,18 @@ export enum TextTheme {
     PRIMARY = 'primary',
     ERROR = 'error'
 }
+
+export enum TextAlign {
+    RIGHT = 'right',
+    LEFT = 'left',
+    CENTER = 'center'
+}
 interface TextProps {
     className?: string,
     title?: string,
     text?: string,
-    theme?: TextTheme
+    theme?: TextTheme,
+    align?: TextAlign
 }
 export const Text = memo((props: TextProps) => {
     const {
@@ -20,10 +27,15 @@ export const Text = memo((props: TextProps) => {
         title,
         text,
         theme = TextTheme.PRIMARY,
+        align = TextAlign.LEFT,
     } = props;
     const { t } = useTranslation();
+    const mods: Mods = {
+        [cls[theme]]: true,
+        [cls[align]]: true,
+    };
     return (
-        <div className={classNames(cls.Text, { [cls[theme]]: true }, [className])}>
+        <div className={classNames(cls.Text, mods, [className])}>
             <p className={cls.title}>{title}</p>
             <p className={cls.text}>{text}</p>
         </div>
