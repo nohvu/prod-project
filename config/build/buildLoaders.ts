@@ -1,6 +1,7 @@
 import { RuleSetRule } from 'webpack';
 import { BuildOptions } from './types/config';
 import { buildCssLoaders } from './loaders/buildCssLoaders';
+import { buildBabelLoader } from './loaders/buildBabelLoader';
 
 export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
     const typeScriptLoader = {
@@ -23,24 +24,7 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
         ],
     };
 
-    const babelLoader = {
-        test: /\.(js|jsx|ts|tsx)$/,
-        exclude: /node_modules/,
-        use: {
-            loader: 'babel-loader',
-            options: {
-                presets: ['@babel/preset-env'],
-                plugins: [
-                    ['i18next-extract', {
-                        locales: ['ru', 'en'],
-                        keyAsDefaultValue: true,
-                        // saveMissing: true,
-                        // outputPath: 'public/locales/{{locale}}/{{ns}}.json',
-                    }],
-                ],
-            },
-        },
-    };
+    const babelLoader = buildBabelLoader(isDev);
 
     const cssLoader = buildCssLoaders(isDev);
 
