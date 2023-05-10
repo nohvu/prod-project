@@ -5,7 +5,7 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Theme } from 'app/providers/ThemeProvider';
 import { Avatar } from './Avatar';
 
-import TestAvatar from './images.png';
+import TestAvatar from '../../assets/tests/images.png';
 
 export default {
     title: 'shared/Avatar',
