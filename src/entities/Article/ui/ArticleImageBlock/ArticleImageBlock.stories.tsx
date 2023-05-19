@@ -7,7 +7,7 @@ import { ArticleBlockType } from 'entities/Article/model/types/article';
 import { ArticleImageBlock } from './ArticleImageBlock';
 
 export default {
-    title: 'entities/ArticleImageBlock',
+    title: 'entities/Article/ArticleImageBlock',
     component: ArticleImageBlock,
     argTypes: {
         backgroundColor: { control: 'color' },

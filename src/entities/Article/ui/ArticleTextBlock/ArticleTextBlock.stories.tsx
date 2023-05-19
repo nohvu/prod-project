@@ -7,7 +7,7 @@ import { Theme } from 'app/providers/ThemeProvider';
 import { ArticleTextBlock } from './ArticleTextBlock';
 
 export default {
-    title: 'entities/ArticleTextBlock',
+    title: 'entities/Article/ArticleTextBlock',
     component: ArticleTextBlock,
     argTypes: {
         backgroundColor: { control: 'color' },
