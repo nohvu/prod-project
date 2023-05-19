@@ -31,13 +31,15 @@
       "id": "1",
       "username": "admin",
       "password": "1234",
-      "role": "ADMIN"
+      "role": "ADMIN",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRirUwCzxBqjGCeHUVbQBqbF28Ph3i1lKkyMw&usqp=CAU"
     },
     {
       "id": "2",
       "username": "user1",
       "password": "qwerty",
-      "role": "USER"
+      "role": "USER",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRirUwCzxBqjGCeHUVbQBqbF28Ph3i1lKkyMw&usqp=CAU"
     }
   ],
   "articles": [

@@ -21,4 +21,5 @@ Normal.decorators = [StoreDecorator({
     articleDetails: {
         data: article,
     },
+    articleDetailsComments: {},
 })];

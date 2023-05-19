@@ -1,10 +1,15 @@
 import { TestAsyncThunk } from 'shared/lib/tests/testAsyncThunk/TestAsyncThunk';
-import { article as data } from 'shared/assets/tests/article';
-import { fetchArticleById } from './fetchArticleById';
+import { Comment } from 'entities/Comment';
+import { fetchCommentsByArticleId } from './fetchCommentsByArticleId';
 
-describe('fetchArticleById.test', () => {
+describe('fetchCommentsByArticleId.test', () => {
     test('success', async () => {
-        const thunk = new TestAsyncThunk(fetchArticleById);
+        const data: Comment[] = [{
+            id: '1',
+            text: 'Hello',
+            user: { id: '1', username: 'admin' },
+        }];
+        const thunk = new TestAsyncThunk(fetchCommentsByArticleId);
         thunk.api.get.mockReturnValue(Promise.resolve({ data }));
         const result = await thunk.callThunk('1');
 
@@ -14,7 +19,7 @@ describe('fetchArticleById.test', () => {
     });
 
     test('error', async () => {
-        const thunk = new TestAsyncThunk(fetchArticleById);
+        const thunk = new TestAsyncThunk(fetchCommentsByArticleId);
         thunk.api.get.mockReturnValue(Promise.resolve({ status: 403 }));
         const result = await thunk.callThunk('1');
 

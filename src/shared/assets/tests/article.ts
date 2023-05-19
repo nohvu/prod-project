@@ -1,6 +1,6 @@
-import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/article';
+import { ArticleBlockType, ArticleType, Article } from 'entities/Article/model/types/article';
 
-export const article = {
+export const article: Article = {
     id: '1',
     title: 'JavaScript news',
     subtitle: 'Что нового в JS за текущий год?',
