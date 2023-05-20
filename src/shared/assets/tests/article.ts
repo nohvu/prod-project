@@ -3,6 +3,11 @@ import { ArticleBlockType, ArticleType, Article } from 'entities/Article/model/t
 export const article: Article = {
     id: '1',
     title: 'JavaScript news',
+    user: {
+        id: '1',
+        username: 'userok',
+        avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRirUwCzxBqjGCeHUVbQBqbF28Ph3i1lKkyMw&usqp=CAU',
+    },
     subtitle: 'Что нового в JS за текущий год?',
     img: 'https://cdn2.hexlet.io/derivations/image/fill_png/1200/565/eyJpZCI6IjRhYTgzNGM3NzQxZmU0MDQ1YWUzZTVlY2Y2MTc5NjU0LnBuZyIsInN0b3JhZ2UiOiJzdG9yZSJ9?signature=ebff15166605853f0470969c43f36e9acb18d92111fc9ddeed6a4e07e73dd52a',
     views: 1122,

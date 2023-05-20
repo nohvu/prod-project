@@ -45,3 +45,4 @@ const articleDetailsCommentSlice = createSlice({
 });
 
 export const { reducer: articleDetailsCommentReducer } = articleDetailsCommentSlice;
+export const { actions: articleDetailsCommentActions } = articleDetailsCommentSlice;

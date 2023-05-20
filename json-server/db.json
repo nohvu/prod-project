@@ -50,6 +50,7 @@
       "img": "https://cdn2.hexlet.io/derivations/image/fill_png/1200/565/eyJpZCI6IjRhYTgzNGM3NzQxZmU0MDQ1YWUzZTVlY2Y2MTc5NjU0LnBuZyIsInN0b3JhZ2UiOiJzdG9yZSJ9?signature=ebff15166605853f0470969c43f36e9acb18d92111fc9ddeed6a4e07e73dd52a",
       "views": 1122,
       "createdAt": "20.04.2023",
+      "userId": "1",
       "type": [
         "IT"
       ],
@@ -139,6 +140,12 @@
       "userId": "2",
       "text": "Всем привет",
       "id": "N_mptBK"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "good morning",
+      "id": "GDj1sEy"
     }
   ],
   "profile": [
