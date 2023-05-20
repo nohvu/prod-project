@@ -1,4 +1,4 @@
-import { fetchArticleById } from 'entities/Article/model/services/fetchArticleById';
+export { ArticleViewSelector } from './ui/ArticleViewSelector/ArticleViewSelector';
 
 export { ArticleDetails } from './ui/ArticleDetails/ArticleDetails';
 
