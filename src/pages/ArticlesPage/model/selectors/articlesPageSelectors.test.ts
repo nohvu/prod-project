@@ -8,17 +8,19 @@ describe('getArticlesPageView.test', () => {
         const state: DeepPartial<StateSchema> = {
             articlesPage: {
                 isLoading: true,
-                view: ArticleView.SMALL,
+                view: ArticleView.BIG,
+                page: 1,
+                hasMore: true,
                 ids: [],
                 entities: {},
             },
         };
-        expect(getArticlesPageView(state as StateSchema)).toEqual(ArticleView.SMALL);
+        expect(getArticlesPageView(state as StateSchema)).toEqual(ArticleView.BIG);
     });
 
     test('should work with empty state', () => {
         const state: DeepPartial<StateSchema> = { };
-        expect(getArticlesPageView(state as StateSchema)).toEqual(undefined);
+        expect(getArticlesPageView(state as StateSchema)).toEqual(ArticleView.SMALL);
     });
 });
 
@@ -28,6 +30,8 @@ describe('getArticlesPageIsLoading.test', () => {
             articlesPage: {
                 isLoading: true,
                 view: ArticleView.SMALL,
+                page: 1,
+                hasMore: true,
                 ids: [],
                 entities: {},
             },
@@ -37,7 +41,7 @@ describe('getArticlesPageIsLoading.test', () => {
 
     test('should work with empty state', () => {
         const state: DeepPartial<StateSchema> = { };
-        expect(getArticlesPageIsLoading(state as StateSchema)).toEqual(undefined);
+        expect(getArticlesPageIsLoading(state as StateSchema)).toEqual(false);
     });
 });
 
@@ -47,6 +51,8 @@ describe('getArticlesPageError.test', () => {
             articlesPage: {
                 isLoading: false,
                 view: ArticleView.SMALL,
+                page: 1,
+                hasMore: true,
                 ids: [],
                 entities: {},
                 error: 'error',

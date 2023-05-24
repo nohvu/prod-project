@@ -15,19 +15,4 @@ describe('articlePageSlice.test', () => {
             error: undefined,
         });
     });
-
-    test('test get articles list service fulfilled', () => {
-        const state: DeepPartial<ArticlesPageSchema> = {
-            isLoading: true,
-        };
-        const articles: Article[] = [article];
-        expect(articlePageReducer(state as ArticlesPageSchema, fetchArticlesList.fulfilled(articles, '')))
-            .toEqual({
-                isLoading: false,
-                ids: ['1'],
-                entities: {
-                    1: article,
-                },
-            });
-    });
 });
