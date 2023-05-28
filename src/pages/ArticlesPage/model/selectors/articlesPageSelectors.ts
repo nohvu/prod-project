@@ -21,6 +21,10 @@ export const getArticlesPageIsLoading = (
     state: StateSchema,
 ) => state.articlesPage?.isLoading || false;
 
+export const getArticlesPageInited = (
+    state: StateSchema,
+) => state.articlesPage?._inited || false;
+
 export const getArticlesPageError = (
     state: StateSchema,
 ) => state.articlesPage?.error;
