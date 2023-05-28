@@ -10,17 +10,19 @@ import { AxiosInstance } from 'axios';
 import { ArticleDetailsCommentSchema } from 'pages/ArticleDetailsPage';
 import { AddCommentFormSchema } from 'features/AddCommentForm';
 import { ArticlesPageSchema } from 'pages/ArticlesPage';
+import { ScrollSafeSchema } from 'features/ScrollSafe';
 
 export interface StateSchema {
     counter: CounterSchema,
     user: UserSchema,
+    scrollSafe: ScrollSafeSchema,
     // Async
     loginForm?: LoginSchema,
     profile?: ProfileSchema,
     articleDetails?: ArticleDetailsSchema,
     articleDetailsComments?: ArticleDetailsCommentSchema,
     addCommentForm?: AddCommentFormSchema,
-    articlesPage?: ArticlesPageSchema
+    articlesPage?: ArticlesPageSchema,
 }
 
 export type StateSchemaKey = keyof StateSchema;
